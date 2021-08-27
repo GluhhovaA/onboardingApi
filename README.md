@@ -1,4 +1,5 @@
-1. git clone git@github.com:GluhhovaA/onboardingApi.git
+0. docker install if you haven't or skip this  https://docs.docker.com/get-docker/    
+1. git clone git@github.com:GluhhovaA/onboardingApi.git 
 2. docker-compose up
 3. docker-compose exec php-fpm cp .env.example .env
 4. docker-compose exec php-fpm composer install
