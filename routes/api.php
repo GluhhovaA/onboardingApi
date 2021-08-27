@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/users', 'Api\UserController@index');
-Route::post('/users', 'Api\UserController@store');
+Route::put('/user', 'Api\UserController@update');
