@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/users', 'Api\UserController@index');
-
 Route::post('/signin', 'Api\SigninController@signin');
 
 Route::get('/profile/user', 'Api\ProfileController@index');
