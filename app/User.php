@@ -14,24 +14,12 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'firstName', 'lastName', 'phone', 'position', 'description', 'photo', 'email', 'password',
+        'firstName', 'lastName', 'phone', 'position', 'description', 'photo', 'user_identifier', 'interest_id',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function userInterests()
+    {
+        return $this->hasMany('App\UserInterest::class');
+    }
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 }

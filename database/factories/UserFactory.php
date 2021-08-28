@@ -19,15 +19,14 @@ use Illuminate\Support\Str;
 
 $factory->define(User::class, function (Faker $faker) {
     $position = ['Back-end developer', 'Front-end developer', 'Product design', 'Brand Communications'];
+
     return [
-        'identifier' => random_int(5, 6),
+        'user_identifier' => '11111',
         'firstName' => $faker->firstName,
         'lastName' => $faker->lastName,
         'phone' => $faker->phoneNumber,
         'position' => $position[array_rand($position, 1)],
         'description' => '',
         'photo' => '',
-        'email' => '',
-        'remember_token' => Str::random(10),
     ];
 });

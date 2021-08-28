@@ -15,4 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/users', 'Api\UserController@index');
-Route::put('/user', 'Api\UserController@update');
+
+Route::post('/signin', 'Api\SigninController@signin');
+
+Route::get('/profile/user', 'Api\ProfileController@index');
+Route::put('/profile/user/update', 'Api\ProfileController@update');
+
+Route::get('/tasks', 'Api\TasksController@index');
+
