@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Interest;
 use App\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -16,12 +15,8 @@ class ProfileController extends Controller
         if($request->id)
         {
             $user = User::find($request->id);
-            $interests = Interest::all();
 
-            return new JsonResponse([
-                'user' => $user,
-                'interests' => $interests
-            ], JsonResponse::HTTP_OK);
+            return new JsonResponse($user, JsonResponse::HTTP_OK);
 
         }
         return new JsonResponse(null, JsonResponse::HTTP_NOT_FOUND);

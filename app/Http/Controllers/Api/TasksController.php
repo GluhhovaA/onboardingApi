@@ -12,7 +12,6 @@ class TasksController extends Controller
     public function index()
     {
         $tasks = Task::all();
-
         if($tasks)
         {
             return new JsonResponse($tasks, JsonResponse::HTTP_OK);

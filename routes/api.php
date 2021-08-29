@@ -20,4 +20,6 @@ Route::get('/profile/user', 'Api\ProfileController@index');
 Route::put('/profile/user/update', 'Api\ProfileController@update');
 
 Route::get('/tasks', 'Api\TasksController@index');
+Route::get('/interests', 'Api\InterestsController@index');
+Route::get('/users', 'Api\UserController@index');
 
