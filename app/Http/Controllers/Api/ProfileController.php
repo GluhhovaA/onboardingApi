@@ -17,7 +17,7 @@ class ProfileController extends Controller
         if($request->id)
         {
             $user = User::find($request->id);
-
+            $user->interests;
             return new JsonResponse($user, JsonResponse::HTTP_OK);
 
         }
