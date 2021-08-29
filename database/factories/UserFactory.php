@@ -21,7 +21,7 @@ $factory->define(User::class, function (Faker $faker) {
     $position = ['Back-end developer', 'Front-end developer', 'Product design', 'Brand Communications'];
 
     return [
-        'user_identifier' => '11111',
+        'user_identifier' => $faker->numberBetween(10000, 90000),
         'firstName' => $faker->firstName,
         'lastName' => $faker->lastName,
         'phone' => $faker->phoneNumber,
