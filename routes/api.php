@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/signin', 'Api\SigninController@signin');
 
 Route::get('/profile/user', 'Api\ProfileController@index');
-Route::put('/profile/user/update', 'Api\ProfileController@update');
+Route::put('/profile/user/update', 'Api\ProfileController@update')->name('upload');
 
 Route::get('/tasks', 'Api\TasksController@index');
 Route::get('/interests', 'Api\InterestsController@index');

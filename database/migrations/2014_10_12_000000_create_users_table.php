@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             $table->string('position');
             $table->text('description');
             $table->string('photo');
-            $table->foreignId('interest_id')->nullable();
             $table->timestamps();
         });
     }

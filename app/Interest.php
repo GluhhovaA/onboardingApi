@@ -12,8 +12,8 @@ class Interest extends Model
         'name',
     ];
 
-    public function userInterests()
+    public function users()
     {
-        return $this->hasMany('App\UserInterest::class');
+        return $this->belongsToMany(User::class);
     }
 }

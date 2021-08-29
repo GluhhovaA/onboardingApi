@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TableUsersInterestsCreate extends Migration
+class TableInterestUserCreate extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class TableUsersInterestsCreate extends Migration
      */
     public function up()
     {
-        Schema::create('users_interests', function (Blueprint $table) {
+        Schema::create('interest_user', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('interest_id');
