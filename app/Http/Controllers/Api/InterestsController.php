@@ -8,7 +8,7 @@ use Illuminate\Http\JsonResponse;
 
 class InterestsController extends Controller
 {
-    public function index()
+    public function index(): JsonResponse
     {
         $interests = Interest::all();
 

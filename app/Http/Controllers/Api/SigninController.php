@@ -9,10 +9,9 @@ use Illuminate\Http\Request;
 
 class SigninController extends Controller
 {
-    public function signin(Request $request)
+    public function signin(Request $request): JsonResponse
     {
         $user = User::where('user_identifier', $request->user_identifier)->first();
-
         if($user)
         {
             return new JsonResponse($user, JsonResponse::HTTP_OK);

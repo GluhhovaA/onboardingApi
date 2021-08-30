@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class TasksController extends Controller
 {
-    public function index()
+    public function index(): JsonResponse
     {
         $tasks = Task::all();
         if($tasks)
