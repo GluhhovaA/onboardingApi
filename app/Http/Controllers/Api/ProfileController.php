@@ -27,9 +27,6 @@ class ProfileController extends Controller
 
     public function update(ProfileRequest $request): JsonResponse
     {
-        dd(response($request->all()));
-
-
         $params = $request->all();
         if(!empty($params))
         {
