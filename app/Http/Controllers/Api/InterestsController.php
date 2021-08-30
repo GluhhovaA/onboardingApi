@@ -11,12 +11,7 @@ class InterestsController extends Controller
     public function index(): JsonResponse
     {
         $interests = Interest::all();
-
-        if($interests)
-        {
-            return new JsonResponse($interests, JsonResponse::HTTP_OK);
-        }
-        return new JsonResponse(null, JsonResponse::HTTP_NOT_FOUND);
+        return new JsonResponse($interests, JsonResponse::HTTP_OK);
     }
 
 }

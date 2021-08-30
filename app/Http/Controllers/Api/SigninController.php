@@ -16,7 +16,6 @@ class SigninController extends Controller
         {
             return new JsonResponse($user, JsonResponse::HTTP_OK);
         }
-
         return new JsonResponse(null, JsonResponse::HTTP_NOT_FOUND);
     }
 }
