@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('phone');
             $table->string('position');
             $table->text('description');
-            $table->string('photo');
+            $table->text('photo');
             $table->timestamps();
         });
     }
