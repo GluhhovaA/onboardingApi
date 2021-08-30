@@ -1,5 +1,6 @@
 <?php
 
+use App\Interest;
 use Illuminate\Database\Seeder;
 
 class InterestSeed extends Seeder
@@ -11,8 +12,23 @@ class InterestSeed extends Seeder
      */
     public function run()
     {
-        factory(App\Interest::class, 5)->create()->each(function ($user) {
-            $user->make();
-        });
+        $interests = $this->getInterests();
+
+        foreach($interests as $interestValue)
+        {
+            $interest = new Interest();
+            $interest->name = $interestValue;
+            $interest->save();
+        }
     }
+
+    private function getInterests()
+    {
+        return ['sport', 'health', 'food', 'shopping', 'animals',
+            'books', 'photo', 'theater', 'music', 'languages', 'traveling',
+            'traveling', 'charity', 'ecology','games', 'cars', 'home', 'science',
+            'IT', 'design', 'parenting',
+        ];
+    }
+
 }
